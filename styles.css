@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Satisfy&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;1,400;1,600&display=swap');
 
 :root {
-  --bg-dark: #090a0d;
-  --bg-surface: #0f1217;
-  --bg-card: #15181f;
-  --bg-card-hover: #1b2029;
-  --gold-primary: #f5b324;
-  --gold-hover: #e09f16;
-  --gold-light: #fde68a;
-  --gold-dark: #b87d0e;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-gold: rgba(245, 179, 36, 0.35);
+  /* Brand Kit Colors - Padaria Prestígio */
+  --prestigio-brown: #4B2E1E;       /* Marrom Tradicional */
+  --prestigio-red: #C62828;         /* Vermelho Prestígio */
+  --prestigio-red-hover: #A81F1F;
+  --prestigio-cream: #FFF6E6;       /* Creme Aconchego */
+  --prestigio-cream-light: #FFFBF5;
+  --prestigio-beige: #E7C9A6;       /* Bege Pão */
+  --prestigio-beige-light: #F4E4D0;
+  --prestigio-dark: #2B1A12;        /* Marrom Escuro */
+  
+  --text-main: #2B1A12;
+  --text-muted: #6B4E3D;
+  --border-beige: #E7C9A6;
+  --border-subtle: rgba(75, 46, 30, 0.15);
 }
 
 * {
@@ -24,150 +25,196 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg-dark);
-  color: #f1f5f9;
+  font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--prestigio-cream);
+  color: var(--text-main);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-.font-serif-accent {
-  font-family: 'Playfair Display', Georgia, serif;
+/* Typography Helpers from Brand Kit */
+.font-script {
+  font-family: 'Playball', 'Satisfy', cursive;
 }
 
-.font-grotesk {
-  font-family: 'Space Grotesk', sans-serif;
+.font-sans-brand {
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Background with chalkboard texture & ambient bakery glows */
-.hero-chalk-bg {
-  background-color: #090b0e;
+.font-serif-brand {
+  font-family: 'Lora', Georgia, serif;
+}
+
+/* Brand Backgrounds */
+.bg-cream {
+  background-color: var(--prestigio-cream);
+}
+
+.bg-cream-light {
+  background-color: var(--prestigio-cream-light);
+}
+
+.bg-prestigio-red {
+  background-color: var(--prestigio-red);
+}
+
+.bg-prestigio-brown {
+  background-color: var(--prestigio-brown);
+}
+
+.bg-prestigio-dark {
+  background-color: var(--prestigio-dark);
+}
+
+.bg-prestigio-beige {
+  background-color: var(--prestigio-beige);
+}
+
+/* Brand Borders */
+.border-prestigio-beige {
+  border-color: var(--prestigio-beige);
+}
+
+.border-prestigio-red {
+  border-color: var(--prestigio-red);
+}
+
+.border-prestigio-brown {
+  border-color: var(--prestigio-brown);
+}
+
+/* Brand Text Colors */
+.text-prestigio-red {
+  color: var(--prestigio-red);
+}
+
+.text-prestigio-brown {
+  color: var(--prestigio-brown);
+}
+
+.text-prestigio-dark {
+  color: var(--prestigio-dark);
+}
+
+.text-prestigio-beige {
+  color: var(--prestigio-beige);
+}
+
+/* Warm Bakery Hero Pattern */
+.hero-bakery-bg {
+  background-color: #FFF6E6;
   background-image: 
-    radial-gradient(circle at 80% 30%, rgba(245, 179, 36, 0.14) 0%, transparent 45%),
-    radial-gradient(circle at 15% 75%, rgba(245, 179, 36, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6) 0%, transparent 80%),
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' opacity='0.035'%3E%3Cpath d='M60 20c-8 0-15 7-15 15v10c0 8 7 15 15 15s15-7 15-15V35c0-8-7-15-15-15zm-20 60c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm70 0c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
-  background-size: cover, cover, cover, 140px 140px;
+    radial-gradient(circle at 90% 20%, rgba(231, 201, 166, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(198, 40, 40, 0.05) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg' opacity='0.035'%3E%3Cpath d='M40 10 C30 10 25 18 25 24 C25 32 35 34 40 34 C45 34 55 32 55 24 C55 18 50 10 40 10 Z' stroke='%234B2E1E' stroke-width='2' fill='none'/%3E%3Cpath d='M15 50 Q25 45 35 55 T55 55 T75 50' stroke='%234B2E1E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-size: cover, cover, 90px 90px;
 }
 
-/* Artistic Chalk Bakery & Coffee Overlay */
-.chalkboard-art {
+/* Glass Header in Cream & Brown */
+.glass-nav-cream {
+  background: rgba(255, 246, 230, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--prestigio-beige);
+}
+
+/* Wavy Red Bottom Ribbon (Brand Kit Element) */
+.wavy-ribbon-bottom {
+  position: relative;
+}
+
+.wavy-ribbon-bottom::after {
+  content: '';
   position: absolute;
-  right: -4%;
-  top: 8%;
-  width: 58%;
-  height: 84%;
-  pointer-events: none;
-  opacity: 0.16;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%23ffffff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Artisan Loaf Outline --%3E%3Cpath d='M180 480 C180 340 320 280 480 280 C640 280 720 360 720 480 C720 540 600 590 450 590 C280 590 180 540 180 480 Z' stroke-width='4'/%3E%3Cpath d='M300 320 Q340 400 380 470' stroke-dasharray='10 8'/%3E%3Cpath d='M420 300 Q460 390 500 480' stroke-dasharray='10 8'/%3E%3Cpath d='M540 310 Q580 400 620 470' stroke-dasharray='10 8'/%3E%3C!-- Coffee Cup Outline --%3E%3Cpath d='M100 240 C100 360 130 420 230 420 C330 420 360 360 360 240 Z' stroke-width='4'/%3E%3Cpath d='M360 270 C410 270 410 350 360 350' stroke-width='4'/%3E%3Cpath d='M70 430 C130 450 330 450 390 430' stroke-width='3.5'/%3E%3C!-- Steam Curves --%3E%3Cpath d='M180 190 Q160 140 190 90 T170 30' stroke-dasharray='7 6' stroke-width='3'/%3E%3Cpath d='M230 180 Q250 130 220 80 T250 20' stroke-dasharray='7 6' stroke-width='3'/%3E%3Cpath d='M280 190 Q260 140 290 90 T270 30' stroke-dasharray='7 6' stroke-width='3'/%3E%3C!-- Wheat Sheaves --%3E%3Cpath d='M680 120 C640 200 600 320 590 420' stroke-width='3'/%3E%3Cellipse cx='670' cy='150' rx='25' ry='12' transform='rotate(35 670 150)'/%3E%3Cellipse cx='630' cy='200' rx='25' ry='12' transform='rotate(-25 630 200)'/%3E%3Cellipse cx='650' cy='250' rx='25' ry='12' transform='rotate(30 650 250)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: contain;
-  filter: drop-shadow(0 0 30px rgba(245, 179, 36, 0.08));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: var(--prestigio-red);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 30%, 75% 85%, 50% 20%, 25% 75%, 0% 20%);
 }
 
-/* Left Vertical Brand Indicator */
-.vertical-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  letter-spacing: 0.28em;
-  font-size: 0.72rem;
-  color: #717d96;
-  text-transform: uppercase;
+/* Curved Red Swoosh Underline */
+.swoosh-underline {
+  display: inline-block;
+  position: relative;
 }
 
-/* Golden Accent Utilities */
-.text-gold {
-  color: var(--gold-primary);
+/* Card Hover Elevation */
+.prestigio-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--prestigio-beige);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(75, 46, 30, 0.06);
 }
 
-.bg-gold {
-  background-color: var(--gold-primary);
+.prestigio-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--prestigio-red);
+  box-shadow: 0 12px 30px -4px rgba(75, 46, 30, 0.12), 0 0 15px rgba(198, 40, 40, 0.08);
 }
 
-.bg-gold:hover {
-  background-color: var(--gold-hover);
+/* Button Styles from Brand Kit */
+.btn-prestigio-red {
+  background-color: var(--prestigio-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(198, 40, 40, 0.25);
 }
 
-.border-gold {
-  border-color: var(--gold-primary);
+.btn-prestigio-red:hover {
+  background-color: var(--prestigio-red-hover);
+  box-shadow: 0 6px 20px rgba(198, 40, 40, 0.35);
+  transform: translateY(-1px);
 }
 
-.glow-gold {
-  box-shadow: 0 0 30px rgba(245, 179, 36, 0.28);
+.btn-prestigio-brown {
+  background-color: var(--prestigio-brown);
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(75, 46, 30, 0.2);
 }
 
-.glow-gold-subtle {
-  box-shadow: 0 4px 25px -2px rgba(245, 179, 36, 0.18);
+.btn-prestigio-brown:hover {
+  background-color: var(--prestigio-dark);
+  box-shadow: 0 6px 20px rgba(75, 46, 30, 0.3);
+  transform: translateY(-1px);
 }
 
-/* Smooth glass effect */
-.glass-nav {
-  background: rgba(9, 10, 13, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+.btn-prestigio-outline {
+  background-color: transparent;
+  color: var(--prestigio-brown);
+  border: 1.5px solid var(--prestigio-brown);
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
-.glass-card {
-  background: rgba(21, 24, 31, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-/* Animations */
-@keyframes pulseSubtle {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-}
-
-.pulse-indicator {
-  animation: pulseSubtle 3s infinite ease-in-out;
-}
-
-@keyframes pingSmall {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-}
-
-.ping-badge {
-  animation: pingSmall 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+.btn-prestigio-outline:hover {
+  background-color: var(--prestigio-brown);
+  color: #FFFFFF;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a0d;
+  background: var(--prestigio-cream);
 }
 ::-webkit-scrollbar-thumb {
-  background: #232733;
+  background: var(--prestigio-beige);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f5b324;
+  background: var(--prestigio-brown);
 }
 
 /* Hide scrollbar for category tabs */
@@ -179,17 +226,18 @@ body {
   scrollbar-width: none;
 }
 
-/* Item image hover overlay */
-.menu-card-img {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.group:hover .menu-card-img {
-  transform: scale(1.06);
-}
-
-/* Modal animation */
-.modal-enter {
-  opacity: 1 !important;
-  transform: scale(1) !important;
+/* Floating WhatsApp Pulsing */
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }
 
+.pulse-badge {
+  animation: pulseBadge 2s infinite ease-in-out;
+}

@@ -1,11 +1,12 @@
-// Padaria Prestígio - Interactive Engine & Data
+// Padaria Prestígio - Brand Kit Engine & Interactive Logic
+// Identidade Visual 1986 | Sabor e tradição em cada detalhe!
 // Av. Cassiano Ricardo, 1560, Av. da Liberdade, 812 - Jardim Alvorada, São José dos Campos - SP
 // Telefone / WhatsApp: (12) 3937-7095
 
 const WHATSAPP_PHONE = "551239377095"; // Formato internacional
 const PHONE_DISPLAY = "(12) 3937-7095";
 
-// Cardápio Completo Fiel às Imagens da Padaria Prestígio
+// Cardápio Completo Fiel às Imagens Oficiais da Padaria Prestígio
 const menuItems = [
   // --- CHAPA & MATINAIS ---
   {
@@ -31,7 +32,7 @@ const menuItems = [
     title: "Misto Quente Tradicional",
     category: "chapa",
     price: "R$ 16,00",
-    badge: "Clássico",
+    badge: "Clássico Paulista",
     description: "Pão francês crocante prensado com fatias nobres de presunto e queijo prato derretendo.",
     image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"
   },
@@ -59,7 +60,7 @@ const menuItems = [
     category: "chapa",
     price: "R$ 4,50",
     badge: "Café da Manhã",
-    description: "O autêntico pão francês de São Paulo douradinho com manteiga derretida estalando na chapa.",
+    description: "O autêntico pão francês douradinho com manteiga derretida estalando na chapa quente.",
     image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=700&q=80"
   },
   {
@@ -95,7 +96,7 @@ const menuItems = [
     category: "chapa",
     price: "R$ 1,50",
     badge: "Unidade",
-    description: "Pão de queijo quentinho com queijo da Canastra. Também temos opção recheada (R$ 2,00) ou Grande (R$ 8,00).",
+    description: "Pão de queijo quentinho com queijo da Canastra. Opção recheada (R$ 2,00) ou Grande (R$ 8,00).",
     image: "https://images.unsplash.com/photo-1598143152818-38840be4613e?auto=format&fit=crop&w=700&q=80"
   },
 
@@ -105,7 +106,7 @@ const menuItems = [
     title: "Capuccino Prestígio Cremoso",
     category: "cafes",
     price: "R$ 9,50",
-    badge: "Destaque",
+    badge: "Destaque da Casa",
     description: "Espresso curto, leite aveludado vaporizado, toque aromático de cacau puro e canela.",
     image: "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80"
   },
@@ -133,7 +134,7 @@ const menuItems = [
     category: "cafes",
     price: "R$ 5,50",
     badge: "Tradicional",
-    description: "O clássico do balcão paulista: café coado quentinho com a quantidade perfeita de leite quente. Pingadinho: R$ 4,50.",
+    description: "O clássico do balcão: café passado quentinho com a quantidade perfeita de leite vaporizado. Pingadinho: R$ 4,50.",
     image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
   },
   {
@@ -150,13 +151,13 @@ const menuItems = [
     title: "Achocolatado Cremoso (Quente/Frio)",
     category: "cafes",
     price: "R$ 8,50",
-    badge: "Pequeno",
+    badge: "Cremoso",
     description: "Feito com chocolate nobre e leite cremoso no capricho. Também disponível no tamanho grande por R$ 11,00.",
     image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=700&q=80"
   },
   {
     id: 17,
-    title: "Leite Cremoso Puro",
+    title: "Copo de Leite Puro",
     category: "cafes",
     price: "R$ 4,00",
     badge: "Copo Pequeno",
@@ -229,10 +230,10 @@ const menuItems = [
     image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=700&q=80"
   },
 
-  // --- SUCOS NATURAIS & BEBIDAS GELADAS (DA FOTO DO CARDÁPIO) ---
+  // --- SUCOS NATURAIS & BEBIDAS GELADAS ---
   {
     id: 25,
-    title: "Suco de Laranja Espremido",
+    title: "Suco de Laranja Espremido na Hora",
     category: "sucos",
     price: "R$ 13,50",
     badge: "100% Puro",
@@ -337,7 +338,7 @@ const menuItems = [
 let currentCategory = "todos";
 let currentSearchTerm = "";
 
-// Renderizar itens do Cardápio
+// Renderizar itens do Cardápio com as Cores e Estilos do Brand Kit
 function renderMenu() {
   const container = document.getElementById('menu-items-container');
   if (!container) return;
@@ -359,13 +360,13 @@ function renderMenu() {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div class="col-span-full py-16 text-center text-gray-400">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center text-[#f5b324]">
+      <div class="col-span-full py-16 text-center text-[#6B4E3D] bg-white rounded-3xl border border-[#E7C9A6] p-8">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#FFF6E6] flex items-center justify-center text-[#C62828] border border-[#E7C9A6]">
           <i data-lucide="search-x" class="w-8 h-8"></i>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">Nenhum item encontrado</h3>
-        <p class="text-sm">Tente pesquisar por outro termo ou mude a categoria acima.</p>
-        <button onclick="resetMenuFilter()" class="mt-4 px-4 py-2 text-xs font-bold text-black bg-[#f5b324] rounded-lg">
+        <h3 class="text-xl font-bold text-[#4B2E1E] mb-2 font-script text-3xl">Nenhum item encontrado</h3>
+        <p class="text-sm text-[#6B4E3D]">Tente pesquisar por outro termo ou mude a categoria acima.</p>
+        <button onclick="resetMenuFilter()" class="mt-4 px-5 py-2.5 text-xs font-bold text-white bg-[#C62828] hover:bg-[#A81F1F] rounded-xl transition-all shadow-sm">
           Ver todos os itens
         </button>
       </div>
@@ -379,35 +380,40 @@ function renderMenu() {
     const waLink = `https://wa.me/${WHATSAPP_PHONE}?text=${orderText}`;
 
     return `
-      <div class="group relative bg-[#13161c] border border-white/5 rounded-2xl overflow-hidden hover:border-[#f5b324]/40 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/70">
+      <div class="prestigio-card group flex flex-col justify-between overflow-hidden">
         <div>
-          <div class="relative h-52 w-full overflow-hidden bg-zinc-900">
-            <img src="${item.image}" alt="${item.title}" class="menu-card-img w-full h-full object-cover" loading="lazy" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#13161c] via-transparent to-transparent opacity-85"></div>
+          <!-- Imagem e Badges do Brand Kit -->
+          <div class="relative h-52 w-full overflow-hidden bg-[#FFF6E6]">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>
             
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-[#f5b324] text-[11px] font-bold px-3 py-1 rounded-full border border-[#f5b324]/30">
+            <!-- Badge Superior no Creme & Marrom -->
+            <span class="absolute top-3 left-3 bg-[#FFF6E6]/95 backdrop-blur-md text-[#4B2E1E] text-[11px] font-bold px-3 py-1 rounded-full border border-[#E7C9A6] shadow-sm">
               ${item.badge}
             </span>
             
-            <span class="absolute bottom-3 right-3 text-white font-extrabold text-lg bg-black/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 shadow-lg">
+            <!-- Preço no Vermelho Prestígio -->
+            <span class="absolute bottom-3 right-3 text-white font-black text-lg bg-[#C62828] px-3.5 py-1.5 rounded-xl shadow-md border border-white/20">
               ${item.price}
             </span>
           </div>
 
+          <!-- Informações de Conteúdo -->
           <div class="p-6">
-            <h3 class="text-xl font-bold text-white group-hover:text-[#f5b324] transition-colors mb-2">
+            <h3 class="text-xl font-bold text-[#2B1A12] group-hover:text-[#C62828] transition-colors mb-2 leading-snug">
               ${item.title}
             </h3>
-            <p class="text-gray-400 text-sm leading-relaxed line-clamp-3">
+            <p class="text-[#6B4E3D] text-sm leading-relaxed line-clamp-3">
               ${item.description}
             </p>
           </div>
         </div>
 
+        <!-- Botão de Ação: WhatsApp Direto -->
         <div class="p-6 pt-0 mt-2">
           <a href="${waLink}" target="_blank" rel="noopener noreferrer" 
-             class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 hover:bg-[#f5b324] text-gray-200 hover:text-black font-bold text-sm transition-all duration-200 border border-white/10 hover:border-[#f5b324] group-hover:bg-[#f5b324]/10">
-            <svg class="w-4 h-4 fill-current text-[#f5b324] group-hover:text-black" viewBox="0 0 24 24">
+             class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#FFF6E6] hover:bg-[#C62828] text-[#4B2E1E] hover:text-white font-bold text-sm transition-all duration-200 border border-[#E7C9A6] hover:border-[#C62828] shadow-sm group/btn">
+            <svg class="w-4 h-4 fill-current text-[#C62828] group-hover/btn:text-white transition-colors" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.309c-.087.086-.179.18-.077.355.101.174.449.741.964 1.2.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.55-.679.115-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824z"/>
             </svg>
             <span>Pedir no WhatsApp ↗</span>
@@ -429,11 +435,11 @@ function resetMenuFilter() {
   const tabs = document.querySelectorAll('.category-tab');
   tabs.forEach(t => {
     if (t.getAttribute('data-category') === 'todos') {
-      t.classList.remove('bg-white/5', 'text-gray-300', 'border-white/10');
-      t.classList.add('bg-[#f5b324]', 'text-black', 'border-[#f5b324]');
+      t.classList.remove('bg-white', 'text-[#4B2E1E]', 'border-[#E7C9A6]');
+      t.classList.add('bg-[#C62828]', 'text-white', 'border-[#C62828]', 'shadow-md');
     } else {
-      t.classList.remove('bg-[#f5b324]', 'text-black', 'border-[#f5b324]');
-      t.classList.add('bg-white/5', 'text-gray-300', 'border-white/10');
+      t.classList.remove('bg-[#C62828]', 'text-white', 'border-[#C62828]', 'shadow-md');
+      t.classList.add('bg-white', 'text-[#4B2E1E]', 'border-[#E7C9A6]');
     }
   });
 
@@ -446,11 +452,11 @@ function setupCategoryFilters() {
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => {
-        t.classList.remove('bg-[#f5b324]', 'text-black', 'border-[#f5b324]');
-        t.classList.add('bg-white/5', 'text-gray-300', 'border-white/10');
+        t.classList.remove('bg-[#C62828]', 'text-white', 'border-[#C62828]', 'shadow-md');
+        t.classList.add('bg-white', 'text-[#4B2E1E]', 'border-[#E7C9A6]');
       });
-      tab.classList.remove('bg-white/5', 'text-gray-300', 'border-white/10');
-      tab.classList.add('bg-[#f5b324]', 'text-black', 'border-[#f5b324]');
+      tab.classList.remove('bg-white', 'text-[#4B2E1E]', 'border-[#E7C9A6]');
+      tab.classList.add('bg-[#C62828]', 'text-white', 'border-[#C62828]', 'shadow-md');
 
       currentCategory = tab.getAttribute('data-category');
       renderMenu();
@@ -500,36 +506,36 @@ function updateStoreStatus() {
 
   const openHtml = `
     <span class="relative flex h-2.5 w-2.5">
-      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
     </span>
-    <span class="font-semibold text-emerald-400">Aberto Agora</span>
-    <span class="text-emerald-500/80 text-xs hidden sm:inline">• ${closingInfo}</span>
+    <span class="font-bold text-emerald-800">Aberto Agora</span>
+    <span class="text-emerald-700/80 text-xs hidden sm:inline">• ${closingInfo}</span>
   `;
 
   const closedHtml = `
-    <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
-    <span class="font-semibold text-amber-400">Fechado no momento</span>
-    <span class="text-amber-500/80 text-xs hidden sm:inline">• Abre às 06:00</span>
+    <span class="h-2.5 w-2.5 rounded-full bg-amber-600"></span>
+    <span class="font-bold text-amber-800">Fechado no momento</span>
+    <span class="text-amber-700/80 text-xs hidden sm:inline">• Abre às 06:00</span>
   `;
 
   if (statusBadge) {
     if (isOpen) {
       statusBadge.innerHTML = openHtml;
-      statusBadge.className = "inline-flex items-center gap-2 text-xs text-emerald-400 bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-sm";
+      statusBadge.className = "inline-flex items-center gap-2 text-xs text-emerald-800 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-300 shadow-sm";
     } else {
       statusBadge.innerHTML = closedHtml;
-      statusBadge.className = "inline-flex items-center gap-2 text-xs text-amber-400 bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/20 shadow-sm";
+      statusBadge.className = "inline-flex items-center gap-2 text-xs text-amber-800 bg-amber-50 px-4 py-2 rounded-full border border-amber-300 shadow-sm";
     }
   }
 
   if (heroStatusBadge) {
     if (isOpen) {
-      heroStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Aberto agora: Pão quentinho saindo!`;
-      heroStatusBadge.className = "inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3.5 py-1.5 rounded-full backdrop-blur-md";
+      heroStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span> Aberto agora: Fornadas quentinhas saindo!`;
+      heroStatusBadge.className = "inline-flex items-center gap-2 text-xs font-bold text-emerald-800 bg-white/90 border border-emerald-300 px-3.5 py-1.5 rounded-full shadow-sm";
     } else {
-      heroStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400"></span> Fornadas amanhã a partir das 06:00`;
-      heroStatusBadge.className = "inline-flex items-center gap-2 text-xs font-semibold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3.5 py-1.5 rounded-full backdrop-blur-md";
+      heroStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-600"></span> Fornadas amanhã a partir das 06:00`;
+      heroStatusBadge.className = "inline-flex items-center gap-2 text-xs font-bold text-amber-800 bg-white/90 border border-amber-300 px-3.5 py-1.5 rounded-full shadow-sm";
     }
   }
 
@@ -543,7 +549,8 @@ function highlightCurrentDay(todayDayIndex) {
   dayRows.forEach(row => {
     const rowDay = parseInt(row.getAttribute('data-day-index'), 10);
     if (rowDay === todayDayIndex) {
-      row.classList.add('bg-[#f5b324]/10', 'border-[#f5b324]/40');
+      row.classList.add('bg-[#FFF6E6]', 'border-[#C62828]');
+      row.classList.remove('border-[#E7C9A6]/50');
       const badge = row.querySelector('.today-badge');
       if (badge) badge.classList.remove('hidden');
     }
@@ -609,7 +616,7 @@ function setupModal() {
   }
 }
 
-// Lightbox para visualizar as fotos originais do cardápio
+// Lightbox para visualizar as fotos originais do cardápio e Brand Kit
 function setupMenuPhotoModal() {
   const triggers = document.querySelectorAll('[data-open-menu-photo]');
   const photoModal = document.getElementById('menu-photo-modal');
@@ -650,7 +657,7 @@ function setupMenuPhotoModal() {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const src = trigger.getAttribute('data-img-src');
-      const title = trigger.getAttribute('data-img-title') || "Cardápio Padaria Prestígio";
+      const title = trigger.getAttribute('data-img-title') || "Padaria Prestígio";
       open(src, title);
     });
   });
@@ -713,4 +720,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Atualizar status a cada 1 minuto
   setInterval(updateStoreStatus, 60000);
 });
-
