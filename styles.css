@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --bg-dark: #090a0d;
+  --bg-surface: #0f1217;
+  --bg-card: #15181f;
+  --bg-card-hover: #1b2029;
+  --gold-primary: #f5b324;
+  --gold-hover: #e09f16;
+  --gold-light: #fde68a;
+  --gold-dark: #b87d0e;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-gold: rgba(245, 179, 36, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.font-serif-accent {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Background with chalkboard texture & ambient bakery glows */
+.hero-chalk-bg {
+  background-color: #090b0e;
+  background-image: 
+    radial-gradient(circle at 80% 30%, rgba(245, 179, 36, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(245, 179, 36, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6) 0%, transparent 80%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' opacity='0.035'%3E%3Cpath d='M60 20c-8 0-15 7-15 15v10c0 8 7 15 15 15s15-7 15-15V35c0-8-7-15-15-15zm-20 60c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm70 0c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: cover, cover, cover, 140px 140px;
+}
+
+/* Artistic Chalk Bakery & Coffee Overlay */
+.chalkboard-art {
+  position: absolute;
+  right: -4%;
+  top: 8%;
+  width: 58%;
+  height: 84%;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%23ffffff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Artisan Loaf Outline --%3E%3Cpath d='M180 480 C180 340 320 280 480 280 C640 280 720 360 720 480 C720 540 600 590 450 590 C280 590 180 540 180 480 Z' stroke-width='4'/%3E%3Cpath d='M300 320 Q340 400 380 470' stroke-dasharray='10 8'/%3E%3Cpath d='M420 300 Q460 390 500 480' stroke-dasharray='10 8'/%3E%3Cpath d='M540 310 Q580 400 620 470' stroke-dasharray='10 8'/%3E%3C!-- Coffee Cup Outline --%3E%3Cpath d='M100 240 C100 360 130 420 230 420 C330 420 360 360 360 240 Z' stroke-width='4'/%3E%3Cpath d='M360 270 C410 270 410 350 360 350' stroke-width='4'/%3E%3Cpath d='M70 430 C130 450 330 450 390 430' stroke-width='3.5'/%3E%3C!-- Steam Curves --%3E%3Cpath d='M180 190 Q160 140 190 90 T170 30' stroke-dasharray='7 6' stroke-width='3'/%3E%3Cpath d='M230 180 Q250 130 220 80 T250 20' stroke-dasharray='7 6' stroke-width='3'/%3E%3Cpath d='M280 190 Q260 140 290 90 T270 30' stroke-dasharray='7 6' stroke-width='3'/%3E%3C!-- Wheat Sheaves --%3E%3Cpath d='M680 120 C640 200 600 320 590 420' stroke-width='3'/%3E%3Cellipse cx='670' cy='150' rx='25' ry='12' transform='rotate(35 670 150)'/%3E%3Cellipse cx='630' cy='200' rx='25' ry='12' transform='rotate(-25 630 200)'/%3E%3Cellipse cx='650' cy='250' rx='25' ry='12' transform='rotate(30 650 250)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  filter: drop-shadow(0 0 30px rgba(245, 179, 36, 0.08));
+}
+
+/* Left Vertical Brand Indicator */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  color: #717d96;
+  text-transform: uppercase;
+}
+
+/* Golden Accent Utilities */
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.bg-gold {
+  background-color: var(--gold-primary);
+}
+
+.bg-gold:hover {
+  background-color: var(--gold-hover);
+}
+
+.border-gold {
+  border-color: var(--gold-primary);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(245, 179, 36, 0.28);
+}
+
+.glow-gold-subtle {
+  box-shadow: 0 4px 25px -2px rgba(245, 179, 36, 0.18);
+}
+
+/* Smooth glass effect */
+.glass-nav {
+  background: rgba(9, 10, 13, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(21, 24, 31, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.pulse-indicator {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+@keyframes pingSmall {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.ping-badge {
+  animation: pingSmall 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5b324;
+}
+
+/* Hide scrollbar for category tabs */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Item image hover overlay */
+.menu-card-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .menu-card-img {
+  transform: scale(1.06);
+}
+
+/* Modal animation */
+.modal-enter {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
